@@ -3,31 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  background-color: white;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.swiper-button-prev {
+  padding: 20px;
+  border-radius: 100%;
+  opacity: 1;
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  color: aqua !important;
+}
+
+.swiper-button-prev::after{
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.swiper-button-next {
+  padding: 20px;
+  border-radius: 100%;
+  opacity: 1;
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  color: aqua !important;
+}
+
+.swiper-button-next::after{
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.swiper-pagination {
+  bottom: -5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: aqua !important;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
